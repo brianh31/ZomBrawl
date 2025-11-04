@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 30410d2898ef6f849aa560be6e03f6d8
+guid: 1a6a216509a8df24189a2dfc2f22e0d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2172107439430813690
-    second: survivor_pistol_0
+      213: 3327076529305890685
+    second: vision_cone_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: survivor_pistol_0
+      name: vision_cone_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 9
-        width: 48
-        height: 46
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 35
+        y: 310
+        width: 530
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af7c1453530e42e10800000000000000
-      internalID: 2172107439430813690
+      spriteID: d7f21ddc9762c2e20800000000000000
+      internalID: 3327076529305890685
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7658975512070d0419de84cf7616780d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      survivor_pistol_0: 2172107439430813690
+      vision_cone_0: 3327076529305890685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
