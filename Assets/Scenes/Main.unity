@@ -590,11 +590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408778552062430222, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 408778552062430222, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 2224305062218121333, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
       propertyPath: m_Name
@@ -604,13 +604,53 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2853650012238205439, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853650012238205439, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853650012238205439, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853650012238205439, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853650012238205439, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853650012238205439, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853650012238205439, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1051860039
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403111683425919063, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403111683425919063, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403111683425919063, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7403111683425919063, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7403111683425919063, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7403111683425919063, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -646,7 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7403111683425919063, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -799,7 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066720533}
   - component: {fileID: 1066720532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background_Test_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1733,7 +1773,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2622,7 +2662,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2224305062218121333, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
   baseCount: 2
   perWaveIncrement: 1
-  timeBetweenWaves: 8
+  timeBetweenWaves: 10
   spawnPadding: 5
   spawnInsideForDebug: 1
 --- !u!4 &1919753714
@@ -2975,7 +3015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1520120964338431499, guid: 3f66764cd0dde4cb286aef84a0205dc9, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.47
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 1520120964338431499, guid: 3f66764cd0dde4cb286aef84a0205dc9, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
