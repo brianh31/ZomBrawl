@@ -2662,7 +2662,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2224305062218121333, guid: e84eb2aecf1a149a8ba2ace0948b493a, type: 3}
   baseCount: 2
   perWaveIncrement: 1
-  timeBetweenWaves: 10
+  timeBetweenWaves: 8
   spawnPadding: 5
   spawnInsideForDebug: 1
 --- !u!4 &1919753714
