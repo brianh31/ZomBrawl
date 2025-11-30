@@ -80,10 +80,25 @@ public class PlayerHealth : MonoBehaviour
     
     void Die()
     {
-        // Game Over - reload scene or show game over screen
-        Debug.Log("Player Died! Game Over");
-        // You can add a game over screen here later
-        // For now, just reload the scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // Show game over screen
+        if (GameOverManager.Instance != null && GameManager.Instance != null)
+        {
+            int finalScore = GameManager.Instance.GetCurrentPoints();
+            int finalWave = 1; // Default wave
+            
+            // Try to get current wave from ZombieSpawner
+            ZombieSpawner spawner = FindObjectOfType<ZombieSpawner>();
+            if (spawner != null)
+            {
+                finalWave = spawner.GetCurrentWave();
+            }
+            
+            GameOverManager.Instance.ShowGameOver(finalScore, finalWave);
+        }
+        else
+        {
+            // Fallback: just reload the scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

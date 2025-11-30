@@ -19,6 +19,7 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] private int currentWave = 0;
     [SerializeField] private bool spawnBoss = false;
     [SerializeField] private int bossWave = 5; // Boss appears every X waves
+    [SerializeField] private float timeBetweenWaves = 5f; // Time to wait after all zombies are killed
     
     private Transform player;
     private int zombiesThisWave;
@@ -66,9 +67,22 @@ public class ZombieSpawner : MonoBehaviour
                 yield return new WaitForSeconds(spawnInterval);
             }
             
-            // Wait before next wave
-            yield return new WaitForSeconds(10f);
+            // Wait until all zombies are killed
+            Debug.Log("All zombies spawned. Waiting for them to be killed...");
+            yield return new WaitUntil(() => AllZombiesKilled());
+            
+            Debug.Log("All zombies killed! Next wave starting soon...");
+            
+            // Short delay before next wave
+            yield return new WaitForSeconds(timeBetweenWaves);
         }
+    }
+    
+    bool AllZombiesKilled()
+    {
+        // Count all zombies currently in the scene
+        GameObject[] zombies = GameObject.FindGameObjectsWithTag("Zombie");
+        return zombies.Length == 0;
     }
     
     void SpawnZombie()
@@ -130,5 +144,10 @@ public class ZombieSpawner : MonoBehaviour
             else
                 return tankZombiePrefab;
         }
+    }
+    
+    public int GetCurrentWave()
+    {
+        return currentWave;
     }
 }
