@@ -15,6 +15,9 @@ public class WeaponData : ScriptableObject
     public int bulletsPerShot = 1; // For shotgun spreading
     public float spreadAngle = 0f; // Shotgun spread
     
+    [Header("Audio")]
+    public AudioClip gunSound; // Sound effect for this weapon
+    
     [Header("Ammo (Optional)")]
     public bool hasInfiniteAmmo = true;
     public int magazineSize = 30;

@@ -20,6 +20,7 @@ MonoBehaviour:
   bulletSpeed: 22
   bulletsPerShot: 1
   spreadAngle: 5
+  gunSound: {fileID: 8300000, guid: 385a244420f8d4f569bf10049cb89a86, type: 3}
   hasInfiniteAmmo: 1
   magazineSize: 30
   reloadTime: 2

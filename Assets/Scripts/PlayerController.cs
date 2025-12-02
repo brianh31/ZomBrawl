@@ -15,11 +15,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private List<WeaponData> ownedWeapons = new List<WeaponData>();
     [SerializeField] private int currentWeaponIndex = 0;
     
+    [Header("Audio")]
+    [SerializeField] private float gunSoundVolume = 0.7f;
+    
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 mousePos;
     private Camera mainCamera;
     private float nextFireTime;
+    private AudioSource audioSource;
     
     private WeaponData currentWeapon;
     
@@ -27,6 +31,15 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
+        
+        // Get or create audio source for gun sounds
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.volume = gunSoundVolume;
+        audioSource.playOnAwake = false;
         
         // Set initial weapon if we have any
         if (ownedWeapons.Count > 0)
@@ -87,6 +100,12 @@ public class PlayerController : MonoBehaviour
     void Shoot()
     {
         if (bulletPrefab == null || firePoint == null || currentWeapon == null) return;
+        
+        // Play gun sound
+        if (currentWeapon.gunSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(currentWeapon.gunSound, gunSoundVolume);
+        }
         
         // Shoot multiple bullets for shotgun
         for (int i = 0; i < currentWeapon.bulletsPerShot; i++)
