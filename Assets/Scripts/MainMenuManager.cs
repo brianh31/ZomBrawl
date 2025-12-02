@@ -38,7 +38,14 @@ public class MainMenuManager : MonoBehaviour
     
     public void PlayGame()
     {
-        SceneManager.LoadScene(gameSceneName);
+        if (SceneTransition.Instance != null)
+        {
+            SceneTransition.Instance.LoadScene(gameSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(gameSceneName);
+        }
     }
     
     public void OpenOptions()
