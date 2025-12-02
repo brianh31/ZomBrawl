@@ -80,6 +80,23 @@ public class PlayerHealth : MonoBehaviour
     
     void Die()
     {
+        // Save high scores before showing game over
+        if (HighScoreManager.Instance != null && GameManager.Instance != null)
+        {
+            int currentScore = GameManager.Instance.GetCurrentPoints();
+            int currentWave = 1;
+            
+            // Try to get current wave from ZombieSpawner
+            ZombieSpawner spawner = FindObjectOfType<ZombieSpawner>();
+            if (spawner != null)
+            {
+                currentWave = spawner.GetCurrentWave();
+            }
+            
+            // Check and save if new high score
+            HighScoreManager.Instance.CheckAndSaveHighScores(currentWave, currentScore);
+        }
+        
         // Show game over screen
         if (GameOverManager.Instance != null && GameManager.Instance != null)
         {
